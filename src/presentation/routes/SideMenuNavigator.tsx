@@ -1,13 +1,16 @@
 import React from 'react'
+import { Dimensions, View } from 'react-native';
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
+
+import { globalColors } from '../theme/Theme';
+
 import StackNavigator from './StackNavigator';
+import BottomTabNavigator from './BottomTabNavigator';
 import ProfileScreen from '../screens/profile/ProfileScreen';
-import { globalColors, globalStyles } from '../theme/Theme';
-import { useWindowDimensions, View } from 'react-native';
 
 const Drawer = createDrawerNavigator();
 
-const { width, height } = useWindowDimensions();
+const { width, height } = Dimensions.get('window');
 
 const SideMenuNavigator = () => {
   return (
@@ -30,7 +33,7 @@ const SideMenuNavigator = () => {
         }
       }}
     >
-    <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+    <Drawer.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
     <Drawer.Screen name="Profile" component={ProfileScreen} />
   </Drawer.Navigator>
   )

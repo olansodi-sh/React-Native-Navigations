@@ -19,7 +19,7 @@ const ProfileScreen = () => {
             
             <PrimaryButton
               label='Abrir Menu'
-              onPress={() =>navigation.dispatch(DrawerActions.toggleDrawer)}
+              onPress={() =>navigation.dispatch(DrawerActions.openDrawer())}
             />
         </View>
     </React.Fragment>
