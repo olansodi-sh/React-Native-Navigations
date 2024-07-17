@@ -7,6 +7,7 @@ import { globalColors } from '../theme/Theme';
 import StackNavigator from './StackNavigator';
 import BottomTabNavigator from './BottomTabNavigator';
 import ProfileScreen from '../screens/profile/ProfileScreen';
+import IconComponent from '../components/shared/IconComponent';
 
 const Drawer = createDrawerNavigator();
 
@@ -33,8 +34,16 @@ const SideMenuNavigator = () => {
         }
       }}
     >
-    <Drawer.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
-    <Drawer.Screen name="Profile" component={ProfileScreen} />
+    <Drawer.Screen
+    options={{
+      drawerIcon:()=>(<IconComponent name="home" size={30} color="#000" />)
+    }} 
+    name="BottomTabNavigator" component={BottomTabNavigator} />
+    <Drawer.Screen
+    options={{
+      drawerIcon:()=>(<IconComponent name="home" size={30} color="#000" />)
+    }} 
+    name="Profile" component={ProfileScreen} />
   </Drawer.Navigator>
   )
 }

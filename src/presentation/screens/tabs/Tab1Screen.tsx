@@ -1,6 +1,5 @@
-import { DrawerActions, useNavigation } from '@react-navigation/native';
-import React, { useEffect } from 'react'
-import { Pressable, Text } from 'react-native'
+
+import React from 'react'
 import MenuHamburguer from '../../components/shared/MenuHamburguer';
 
 const Tab1Screen = () => {
